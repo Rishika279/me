@@ -35,20 +35,23 @@ def advancedGuessingGame():
             lowerBound = int(input("Enter a lower bound: "))
             upperBound = int(input("Enter an upper bound: "))
             print(f"OK then, a number between {lowerBound} and {upperBound} ?")
-
+            break
         except Exception as e:
             print(f"Sorry. That is not a number. Try again. ({e})")
-        upperBound = int(upperBound)
+    upperBound = int(upperBound)
 
-        actualNumber = random.randint(lowerBound, upperBound)
+    actualNumber = random.randint(lowerBound, upperBound)
 
-        guessed = False
+    guessed = False
 
-        while not guessed:
+    while not guessed:
+        while True:
             try:
                 guessedNumber = int(input("Guess a number: "))
                 if lowerBound <= guessedNumber <= upperBound:
                     print(f"You guessed {guessedNumber},")
+                    break
+
                 else:
                     print(
                         f"{guessedNumber} is not between {lowerBound} and {upperBound}, you silly goose!. Try again."
@@ -56,13 +59,13 @@ def advancedGuessingGame():
             except Exception as e:
                 print(f"Sorry. That is not a number. Try again. ({e})")
 
-            if guessedNumber == actualNumber:
-                print(f"You got it!! It was {actualNumber}")
-                guessed = True
-            elif guessedNumber < actualNumber:
-                print("Too small, try again :'(")
-            else:
-                print("Too big, try again :'(")
+        if guessedNumber == actualNumber:
+            print(f"You got it!! It was {actualNumber}")
+            guessed = True
+        elif guessedNumber < actualNumber:
+            print("Too small, try again :'(")
+        else:
+            print("Too big, try again :'(")
         return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
