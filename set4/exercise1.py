@@ -37,8 +37,8 @@ def get_some_details():
          dictionary, you'll need integer indeces for lists, and named keys for
          dictionaries.
     """
-
-    json_data = open(LOCAL + "/lazyduck.json").read()
+    mode = "r"
+    json_data = open(LOCAL + "/lazyduck.json", mode, encoding="utf-8").read()
     data = json.loads(json_data)
     lastName = data["results"][0]["name"]["last"]
     password = data["results"][0]["login"]["password"]
@@ -86,7 +86,19 @@ def wordy_pyramid():
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &wordlength=
     """
+
     pyramid = []
+    for i in range(9):
+        word_length = 3 + 2 * i
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={word_length}"
+        r = requests.get(url)
+        pyramid.append(r.text)
+
+    for j in range(9):
+        word_length = 20 - 2 * j
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={word_length}"
+        r = requests.get(url)
+        pyramid.append(r.text)
 
     return pyramid
 
@@ -105,13 +117,24 @@ def pokedex(low=1, high=5):
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    id = 5
-    url = f"https://pokeapi.co/api/v2/pokemon/{id}"
+    height_list = []
+    for i in range(low, high + 1):
+        url = f"https://pokeapi.co/api/v2/pokemon/{i}"
+        r = requests.get(url)
+        if r.status_code is 200:
+            the_json = json.loads(r.text)
+        height_list.append(the_json["height"])
+
+    tallest = low + height_list.index(max(height_list))
+    url = f"https://pokeapi.co/api/v2/pokemon/{tallest}"
     r = requests.get(url)
     if r.status_code is 200:
         the_json = json.loads(r.text)
+    name = the_json["name"]
+    weight = the_json["weight"]
+    height = the_json["height"]
 
-    return {"name": None, "weight": None, "height": None}
+    return {"name": name, "weight": weight, "height": height}
 
 
 def diarist():
