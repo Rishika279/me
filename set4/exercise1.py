@@ -154,7 +154,14 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    pass
+    mode = "r"
+    gcode = open(LOCAL + "/Trispokedovetiles(laser).gcode", mode)
+    data = gcode.read()
+    gcode.close()
+    laser_count = str(data.count("M10 P1"))
+
+    with open(LOCAL + "/lasers.pew", "w", encoding="utf-8") as laser_file:
+        laser_file.write(laser_count)
 
 
 if __name__ == "__main__":

@@ -199,7 +199,7 @@
   },
   {
     "of_total": 29,
-    "mark": 28,
+    "mark": 29,
     "results": [
       {
         "value": 1,
@@ -242,7 +242,7 @@
         "name": "Exercise 3: guessing game, U&L"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: guessing game, polite failures"
       },
       {
@@ -279,48 +279,82 @@
       },
       {
         "value": 1,
-        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 1) randomly generated test value"
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 5) randomly generated test value"
       },
       {
         "value": 1,
-        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 61) randomly generated test value"
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 33) randomly generated test value"
       },
       {
         "value": 1,
-        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 90) randomly generated test value"
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 8) randomly generated test value"
       },
       {
         "value": 1,
-        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 46) randomly generated test value"
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 66) randomly generated test value"
       },
       {
         "value": 1,
-        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 10) randomly generated test value"
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 31) randomly generated test value"
       },
       {
         "value": 1,
-        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 2) randomly generated test value"
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 60) randomly generated test value"
       },
       {
         "value": 1,
-        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 37) randomly generated test value"
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 31) randomly generated test value"
       },
       {
         "value": 1,
-        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 81) randomly generated test value"
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 4) randomly generated test value"
       },
       {
         "value": 1,
-        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 95) randomly generated test value"
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 15) randomly generated test value"
       },
       {
         "value": 1,
-        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 65) randomly generated test value"
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 79) randomly generated test value"
       }
     ],
     "week_number": 3
   },
-  "4",
+  {
+    "of_total": 7,
+    "mark": 7,
+    "results": [
+      {
+        "value": 1,
+        "name": "Exercise 1: get some data out of a JSON file"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: request some words from the internet"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Consult the Pokedex."
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Consult the Pokedex."
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Consult the Pokedex."
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Consult the Pokedex."
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: count the lasers."
+      }
+    ],
+    "week_number": 4
+  },
   "5",
   "6",
   "7",
