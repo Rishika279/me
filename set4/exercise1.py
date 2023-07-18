@@ -37,11 +37,9 @@ def get_some_details():
          dictionary, you'll need integer indeces for lists, and named keys for
          dictionaries.
     """
-    mode = "r"
-    json_data = open(LOCAL + "/lazyduck.json", mode, encoding="utf-8")
-    json_data.read()
+    with open(LOCAL + "/lazyduck.json", "r", encoding="utf-8") as file:
+        json_data = file.read()
     data = json.loads(json_data)
-    json_data.close()
     lastName = data["results"][0]["name"]["last"]
     password = data["results"][0]["login"]["password"]
     postcode = int(data["results"][0]["location"]["postcode"])
